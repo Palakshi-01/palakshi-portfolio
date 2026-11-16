@@ -1,13 +1,13 @@
 /* Main Colors and Variables */
 :root {
-  --color-primary: #BF2B54;        /* Raspberry */
-  --color-primary-dark: #8A1535;   /* Dark Raspberry */
-  --color-accent: #DA6C81;         /* Grapefruit pink */
+  --color-primary: #BF2B54;
+  --color-primary-dark: #8A1535;
+  --color-accent: #DA6C81;
   --color-accent-light: rgba(218, 108, 129, 0.15);
-  --color-bg: #F5E9D0;             /* Vanilla cream */
-  --color-card-bg: #FFFFFF;        /* White for cards */
-  --color-text: #381E26;           /* Main text color */
-  --color-text-muted: #6B4953;     /* Subtitle text */
+  --color-bg: #F5E9D0;
+  --color-card-bg: #FFFFFF;
+  --color-text: #381E26;
+  --color-text-muted: #6B4953;
   --color-border: rgba(191, 43, 84, 0.2);
 
   --font-heading: 'Playfair Display', Georgia, serif;
@@ -273,7 +273,6 @@ img {
   text-align: left;
 }
 
-/* Main focus on Palakshi's center portrait */
 .gallery-card.featured-card {
   border: 1.5px solid var(--color-accent);
   box-shadow: 0 10px 28px rgba(191, 43, 84, 0.14);
@@ -284,10 +283,9 @@ img {
   aspect-ratio: 4 / 3;
   border-radius: 6px;
   overflow: hidden;
-  background-color: #EBDCC9; /* Fallback before user adds pictures */
+  background-color: #EBDCC9;
 }
 
-/* Portrait ratio (4 tall by 3 wide) for the center photo */
 .gallery-card.featured-card .card-image {
   aspect-ratio: 3 / 4;
 }
@@ -436,7 +434,7 @@ img {
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 4px;
-  background-color: #EBDCC9; /* Fallback */
+  background-color: #EBDCC9;
   overflow: hidden;
 }
 
