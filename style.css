@@ -1,0 +1,866 @@
+/* Main Colors and Variables */
+:root {
+  --color-primary: #BF2B54;        /* Raspberry */
+  --color-primary-dark: #8A1535;   /* Dark Raspberry */
+  --color-accent: #DA6C81;         /* Grapefruit pink */
+  --color-accent-light: rgba(218, 108, 129, 0.15);
+  --color-bg: #F5E9D0;             /* Vanilla cream */
+  --color-card-bg: #FFFFFF;        /* White for cards */
+  --color-text: #381E26;           /* Main text color */
+  --color-text-muted: #6B4953;     /* Subtitle text */
+  --color-border: rgba(191, 43, 84, 0.2);
+
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+/* Reset and basic setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+section {
+  scroll-margin-top: 4.5rem;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s ease;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Section Title Styles */
+.section-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background-color: var(--color-accent-light);
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--color-border);
+}
+
+.section-tag.light {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.section-title.white {
+  color: #FFFFFF;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+}
+
+.section-subtitle.light-text {
+  color: rgba(245, 233, 208, 0.9);
+}
+
+.section-header.center {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 3rem;
+}
+
+/* Navigation Bar */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 0;
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+}
+
+.logo span {
+  color: var(--color-accent);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+.nav-menu a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 0.9rem;
+  border-radius: 50px;
+}
+
+.nav-menu a:hover {
+  background-color: #FFFFFF;
+  color: var(--color-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+}
+
+/* Hero Section */
+.hero {
+  padding: 4.5rem 0 3.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-content {
+  max-width: 850px;
+  margin: 0 auto 3rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+  margin-bottom: 1.2rem;
+}
+
+.hero-subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-style: italic;
+  color: var(--color-primary-dark);
+  margin-bottom: 1.2rem;
+}
+
+.hero-description {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  max-width: 650px;
+  margin: 0 auto 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.btn-secondary {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: #FFFFFF;
+}
+
+/* Hero Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+  align-items: center;
+}
+
+.gallery-card {
+  background-color: #FFFFFF;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 12px rgba(56, 30, 38, 0.06);
+  text-align: left;
+}
+
+/* Main focus on Palakshi's center portrait */
+.gallery-card.featured-card {
+  border: 1.5px solid var(--color-accent);
+  box-shadow: 0 10px 28px rgba(191, 43, 84, 0.14);
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #EBDCC9; /* Fallback before user adds pictures */
+}
+
+/* Portrait ratio (4 tall by 3 wide) for the center photo */
+.gallery-card.featured-card .card-image {
+  aspect-ratio: 3 / 4;
+}
+
+.card-info {
+  padding: 0.8rem 0.2rem 0.2rem;
+}
+
+.card-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  display: block;
+}
+
+.card-info h3 {
+  font-size: 1.15rem;
+  margin: 0.2rem 0 0.3rem;
+}
+
+.card-info p {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* About Section */
+.about {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.about-card {
+  background-color: #FFFFFF;
+  padding: 2.2rem;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 16px rgba(56, 30, 38, 0.06);
+}
+
+.about-card h3 {
+  font-size: 1.4rem;
+  margin: 0.4rem 0 0.6rem;
+}
+
+.card-intro {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+.card-summary-points {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+}
+
+.summary-point strong {
+  color: var(--color-primary);
+}
+
+.traits-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.trait-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+}
+
+.lead-text {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--color-primary-dark);
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--color-border);
+}
+
+.fact h4 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  margin-bottom: 0.2rem;
+}
+
+.fact p {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Athletics Section */
+.athletics {
+  padding: 5rem 0;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.sports-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.sports-card {
+  background-color: #FFFFFF;
+  padding: 0.8rem 0.8rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  color: var(--color-text);
+}
+
+.sports-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  background-color: #EBDCC9; /* Fallback */
+  overflow: hidden;
+}
+
+.sports-info {
+  text-align: center;
+  margin-top: 0.9rem;
+}
+
+.sports-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  display: block;
+}
+
+.sports-info h3 {
+  font-size: 1.2rem;
+  margin: 0.2rem 0 0.3rem;
+}
+
+.sports-info p {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  text-align: center;
+}
+
+.principle h4 {
+  font-size: 1.15rem;
+  color: #FFFFFF;
+  margin-bottom: 0.4rem;
+}
+
+.principle p {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+/* Education and Experience */
+.education {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.col-title {
+  font-size: 1.6rem;
+  margin-bottom: 1.8rem;
+}
+
+.info-card {
+  background-color: #FFFFFF;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  margin-bottom: 1.5rem;
+}
+
+.info-card.dashed {
+  border-style: dashed;
+}
+
+.card-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background-color: var(--color-accent-light);
+  padding: 0.25rem 0.7rem;
+  border-radius: 50px;
+  margin-bottom: 0.6rem;
+}
+
+.info-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.2rem;
+}
+
+.info-card .institution {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 0.6rem;
+}
+
+.info-card .description {
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.bullet-list {
+  list-style: none;
+}
+
+.bullet-list li {
+  font-size: 0.88rem;
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.35rem;
+}
+
+.bullet-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+/* Projects Section */
+.projects {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: #FFFFFF;
+  padding: 2.2rem;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.project-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.7rem;
+}
+
+.project-card p {
+  font-size: 0.92rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.tech-tags span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  padding: 0.25rem 0.65rem;
+  border-radius: 50px;
+}
+
+/* Skills Section & Table */
+.skills {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table-container {
+  background-color: #FFFFFF;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  overflow-x: auto;
+}
+
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.skills-table th {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  padding: 0.8rem 1rem;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.skills-table td {
+  padding: 1.1rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+
+.skills-table tr:last-child td {
+  border-bottom: none;
+}
+
+.category-name {
+  font-weight: 700;
+  color: var(--color-primary);
+  width: 25%;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: var(--color-accent-light);
+  color: var(--color-primary);
+  padding: 0.25rem 0.7rem;
+  border-radius: 50px;
+}
+
+/* Hobbies Section */
+.hobbies {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.hobby-card {
+  background-color: #FFFFFF;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+
+.hobby-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hobby-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hobby-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.hobby-card p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* Footer */
+.footer {
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  margin-bottom: 0.4rem;
+}
+
+.footer-tagline {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 1.2rem;
+  margin-bottom: 1.8rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-links a:hover {
+  color: var(--color-primary);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.to-top {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.to-top:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 3rem auto 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .sports-grid {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .split-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hobbies-grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-tag {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .facts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
